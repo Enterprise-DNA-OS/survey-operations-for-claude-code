@@ -1,13 +1,40 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Survey Operations for Claude Code: what needs attention, rendered by npm run view",
+    "title": "The survey week",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Follow-ups",
+        "sql": "select * from action_queue order by due_on"
+      },
+      {
+        "title": "Scores by segment",
+        "sql": "select * from scorecards order by survey,question,segment"
+      }
+    ]
+  },
+  {
+    "name": "recovery",
+    "title": "Service recovery desk",
+    "sections": [
+      {
+        "title": "Low recommendation scores",
+        "sql": "select * from detractor_queue order by received_on"
+      },
+      {
+        "title": "Owner workload",
+        "sql": "select owner,count(*) open_actions,min(due_on) next_due from action_queue group by owner order by owner"
+      }
+    ]
+  },
+  {
+    "name": "privacy",
+    "title": "Record review desk",
+    "sections": [
+      {
+        "title": "Accuracy and retention review",
+        "sql": "select * from privacy_queue order by review_due",
+        "note": "Reminders for a human review. No automatic deletion or legal certification."
       }
     ]
   }

@@ -1,0 +1,9 @@
+{
+ "survey":{"code":"EXPORT-DEMO","name":"Exported service survey","owner":"Operations","purpose":"Review exported service feedback","retention_days":90},
+ "columns":{"response_id":"Response ID","received_on":"Submitted Date","respondent":"Respondent","segment":"Branch"},
+ "questions":[
+  {"code":"NPS","name":"How likely are you to recommend us?","kind":"nps","column":"How likely are you to recommend us?"},
+  {"code":"CSAT","name":"How satisfied were you?","kind":"csat","column":"How satisfied were you?"},
+  {"code":"COMMENT","name":"What should we change?","kind":"text","column":"What should we change?"}
+ ]
+}

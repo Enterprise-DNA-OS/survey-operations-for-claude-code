@@ -1,11 +1,56 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "name": "survey-brief",
+    "title": "Survey review brief",
+    "for_each": "select id,code from surveys order by code",
+    "file": "code",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Purpose and owner",
+        "sql": "select code,name,owner,purpose,retention_days from surveys where id=$1"
+      },
+      {
+        "title": "Scores",
+        "sql": "select sc.* from scorecards sc join surveys s on s.code=sc.survey where s.id=$1"
+      },
+      {
+        "title": "Actions",
+        "sql": "select a.* from action_queue a join surveys s on s.code=a.survey where s.id=$1"
+      }
+    ]
+  },
+  {
+    "name": "follow-up-paper",
+    "title": "Internal follow-up working paper",
+    "for_each": "select id,source_id from responses order by source_id",
+    "file": "source_id",
+    "sections": [
+      {
+        "title": "Response record",
+        "sql": "select source_id,respondent,segment,received_on,verified_on,review_due from responses where id=$1"
+      },
+      {
+        "title": "Answers",
+        "sql": "select q.name,q.kind,a.score,a.answer_text from answers a join questions q on q.id=a.question_id where a.response_id=$1"
+      },
+      {
+        "title": "Follow-up and evidence",
+        "sql": "select title,owner,due_on,status,outcome,evidence from actions where response_id=$1",
+        "note": "Draft working paper. Verify accuracy and retention before external use."
+      }
+    ]
+  },
+  {
+    "name": "retention-review",
+    "title": "Retention review working paper",
+    "for_each": "select id,code from surveys order by code",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Records for review",
+        "sql": "select source_id,respondent,received_on,review_due,verified_on from responses where survey_id=$1 and (review_due<current_date or verified_on is null)",
+        "note": "The configured period is a business policy. Record the reason for continued retention or arrange authorised disposal."
+      }
     ]
   }
 ]

@@ -1,0 +1,14 @@
+# Record checks for survey operations
+
+Checked 17 October 2026. These checks support a New Zealand operator's review of personal information. They do not certify legal compliance. Other countries, regulated sectors and each organisation's actual purpose need their own reviewed policy.
+
+| Check | Implemented behaviour | Source and limit |
+|---|---|---|
+| Accuracy before use | `/compliance` lists responses without a recorded accuracy check. `/verify-response` records the date and evidence reference. Closing an action and drafting a follow-up require a recorded check. | [NZ Privacy Principle 8](https://www.privacy.org.nz/privacy-principles/8/) requires reasonable steps for accuracy, relevance and completeness before use or disclosure. The operator decides what checks are reasonable. A date alone proves nothing. |
+| Review retention | Each survey has a purpose and a configured retention review period. Imports calculate a review date from receipt. `/compliance` lists overdue reviews. `/review-retention` requires a future review date and an explicit reason recorded in the audit history. | [NZ Privacy Principle 9](https://www.privacy.org.nz/privacy-principles/9/) limits keeping personal information longer than its lawful purpose requires. The demo's 90 and 180 day settings are illustrative business policies, never statutory periods. No record is deleted automatically. |
+| Restrict access | Migrations enable row security and revoke public access to domain records and views. The local database runs as its owner. No public API is provided. | [NZ Privacy Principle 5](https://www.privacy.org.nz/privacy-principles/5/) concerns reasonable security safeguards. The deployment still needs named roles, appropriate access, backups and secure storage. |
+| Preserve a decision trail | Imports keep the original response row. Changes through the CLI record actor, event and detail. Source changes stop for reconciliation. Closure needs an outcome and evidence. | Business controls, not a statutory format. Actor names are supplied text, not verified identities. Owners can edit data directly. The history is not tamper-proof. |
+
+Reports and exported backups can contain personal information, including text comments and original source rows. Keep them within the same access and retention controls as the database. Read-only documents are internal working papers. Check accuracy and permission before sharing them. When disposal is required, review original imports, notes, drafts, reports, audit details and backups as well as the response record.
+
+NPS uses answered recommendation questions on the 0 to 10 scale: percentage scoring 9 or 10 minus percentage scoring 0 to 6. CSAT uses answered satisfaction questions on the 1 to 5 scale: percentage scoring 4 or 5. Each question and segment has its own denominator. Missing answers stay missing. No inference about nonrespondents or statistical significance is made.
