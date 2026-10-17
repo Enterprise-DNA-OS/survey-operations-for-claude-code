@@ -1,3 +1,7 @@
+---
+description: "Read one complete response file"
+---
+
 # Read one complete response file
 
 Read answers, actions and notes before acting. If a name matches several records, list the candidates and stop.

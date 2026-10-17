@@ -1,3 +1,7 @@
+---
+description: "Bring in a mapped Salesforce survey response export"
+---
+
 # Bring in a mapped Salesforce survey response export
 
 Read docs/replace-salesforce-feedback-management.md. Inspect the actual headers. Confirm the mapping and score scales, run a dry run, then remove --dry-run to import. Reconcile coverage and scorecards. Never silently reshape ranking or multiple-choice exports.

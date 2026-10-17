@@ -1,3 +1,7 @@
+---
+description: "Export every record and the original source rows"
+---
+
 # Export every record and the original source rows
 
 Choose a new protected output path. Exported comments, audit entries and original rows may identify people. Never send the file.

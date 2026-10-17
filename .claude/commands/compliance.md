@@ -1,3 +1,7 @@
+---
+description: "Review missing accuracy checks and overdue retention reviews"
+---
+
 # Review missing accuracy checks and overdue retention reviews
 
 Present the actual records. Keep each survey and score scale separate. Missing values stay missing. Never interpret a count as a response rate without invitation data.

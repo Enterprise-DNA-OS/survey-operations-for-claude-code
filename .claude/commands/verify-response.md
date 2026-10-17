@@ -1,3 +1,7 @@
+---
+description: "Record an accuracy check already performed"
+---
+
 # Record an accuracy check already performed
 
 The operator must actually compare the source. Never record a check merely because the import ran.

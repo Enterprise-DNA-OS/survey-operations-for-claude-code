@@ -1,3 +1,7 @@
+---
+description: "Render the read-only dashboards"
+---
+
 # Render the read-only dashboards
 
 Open the generated week, recovery and privacy HTML. Read-only output does not change records. Review information access before sharing.

@@ -1,3 +1,7 @@
+---
+description: "Record a completed follow-up with evidence"
+---
+
 # Record a completed follow-up with evidence
 
 Read the action and response first. Closure requires an accuracy check and a current retention review. Record only work that happened.

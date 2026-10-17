@@ -1,3 +1,7 @@
+---
+description: "Compare recommendation and satisfaction scores by segment"
+---
+
 # Compare recommendation and satisfaction scores by segment
 
 Present the actual records. Keep each survey and score scale separate. Missing values stay missing. Never interpret a count as a response rate without invitation data.

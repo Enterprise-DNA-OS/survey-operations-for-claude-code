@@ -1,3 +1,7 @@
+---
+description: "Record a reasoned retention review"
+---
+
 # Record a reasoned retention review
 
 Read docs/compliance.md. A future review date requires a real purpose, not a way to clear a warning. This does not delete anything.

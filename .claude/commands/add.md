@@ -1,3 +1,7 @@
+---
+description: "Add a survey, question, response, answer or action"
+---
+
 # Add a survey, question, response, answer or action
 
 Read docs/cli.md for the exact fields. Prepare the JSON from supplied facts, read the related records, run once, then read back. Do not invent names, scores or dates.

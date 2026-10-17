@@ -1,3 +1,7 @@
+---
+description: "Reconcile response counts, answer counts and questions per response"
+---
+
 # Reconcile response counts, answer counts and questions per response
 
 Present the actual records. Keep each survey and score scale separate. Missing values stay missing. Never interpret a count as a response rate without invitation data.

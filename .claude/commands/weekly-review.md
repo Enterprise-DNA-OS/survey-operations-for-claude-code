@@ -1,3 +1,7 @@
+---
+description: "Draft the Monday survey review"
+---
+
 # Draft the Monday survey review
 
 The script reads scorecards, follow-ups and compliance. Read those three results and the saved draft. Summarise actions by owner, and keep missing data visible. No message sends.

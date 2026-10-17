@@ -1,3 +1,7 @@
+---
+description: "Prepare this week's recovery work in due-date order"
+---
+
 # Prepare this week's recovery work in due-date order
 
 Present the actual records. Keep each survey and score scale separate. Missing values stay missing. Never interpret a count as a response rate without invitation data.

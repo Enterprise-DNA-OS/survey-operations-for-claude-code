@@ -1,3 +1,7 @@
+---
+description: "Record a factual response note"
+---
+
 # Record a factual response note
 
 Read the full response first. Attribute the note to the actual operator.
